@@ -48,6 +48,7 @@
   grid-row-gap: 20px;
 }
 
+/* Mobile Responsiveness */
 @media only screen and (max-width: 48em) {
   .asteroids {
     display: flex;

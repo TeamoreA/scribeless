@@ -1,20 +1,29 @@
 <template>
   <div id="app">
-    <Nav/>
-    <asteroids />
+    <Nav />
+    <main>
+      <router-view />
+    </main>
   </div>
 </template>
 
 <script>
-import Asteroids from "@/views/Asteroids";
 import Nav from "@/components/Nav";
-
 
 export default {
   name: "App",
   components: {
-    Asteroids,
-    Nav
+    Nav,
   },
 };
 </script>
+
+<style scoped>
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 80vh;
+}
+</style>

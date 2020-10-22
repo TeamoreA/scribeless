@@ -9,9 +9,10 @@ import '@/assets/css/tailwind.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faEye, faHeart } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
- 
+import router from './router'
+
 library.add(faEye,faHeart)
- 
+
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 
@@ -19,5 +20,6 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App),
+  router,
+  render: h => h(App)
 }).$mount('#app')
