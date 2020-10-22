@@ -8,14 +8,13 @@
         <p class="text-gray-700 text-base">Maximum: 56789</p>
 
         <div class="alerts my-4">
-
-        <div
-          class="py-2 px-6 bg-red-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
-          role="alert"
-        >
-        Dangerous
-        </div>
-        <!-- <div
+          <div
+            class="py-2 px-6 bg-red-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
+            role="alert"
+          >
+            Dangerous
+          </div>
+          <!-- <div
           class="py-2 px-6 bg-green-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
           role="alert"
         >
@@ -28,12 +27,12 @@
             class="float-left bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
           >
             <font-awesome-icon icon="eye" />
-            <span class="px-4">View</span></button
+            <span class="px-2">View</span></button
           ><button
             class="float-right bg-gray-300 hover:bg-gray-400 text-red-800 font-bold py-2 px-4 rounded inline-flex items-center"
           >
             <font-awesome-icon icon="heart" />
-            <span class="px-4">Favorite</span>
+            <span class="px-2">Favorite</span>
           </button>
         </div>
       </div>
@@ -43,10 +42,17 @@
 
 <style scoped>
 .asteroids {
-    padding: 20px;
+  padding: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 20px;
+}
+
+@media only screen and (max-width: 48em) {
+  .asteroids {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .card {
@@ -58,10 +64,10 @@
 }
 
 .alerts {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 </style>
